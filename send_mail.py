@@ -7,7 +7,6 @@ from email.mime.text import MIMEText
 import sys
 import getpass
 import time
-import urllib
 import getopt
 
 def init_starttls(host):
