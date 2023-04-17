@@ -76,8 +76,10 @@ if __name__ == '__main__':
 
         (smtp_server, login, from_email, email_subject, email_body_file, dest_list_file) = args[:6]
         attachment_files = args[6:]
-        password = getpass.getpass()
-
+        if sys.stdin.isatty():
+                password = getpass.getpass()
+        else:
+                password = sys.stdin.readline().rstrip()
         email_body_fd = open(email_body_file)
         email_body = email_body_fd.read().replace('\n', '<br />')
         email_body_fd.close()
