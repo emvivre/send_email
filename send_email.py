@@ -80,10 +80,6 @@ if __name__ == '__main__':
                 password = getpass.getpass()
         else:
                 password = sys.stdin.readline().rstrip()
-<<<<<<< HEAD
-=======
-
->>>>>>> 9a6ced4 (* Support input password from stdin)
         email_body_fd = open(email_body_file)
         email_body = email_body_fd.read().replace('\n', '<br />')
         email_body_fd.close()
